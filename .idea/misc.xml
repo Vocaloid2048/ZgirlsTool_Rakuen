@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/ZgirlsTool/app/src/main/res/drawable/ic_baseline_attach_money_24.xml" value="0.31296296296296294" />
+        <entry key="..\:/ZgirlsTool/app/src/main/res/layout/about.xml" value="0.3567708333333333" />
+        <entry key="..\:/ZgirlsTool/app/src/main/res/layout/activity_about.xml" value="0.33" />
+        <entry key="..\:/ZgirlsTool/app/src/main/res/layout/activity_background_preview.xml" value="0.2949074074074074" />
+        <entry key="..\:/ZgirlsTool/app/src/main/res/layout/activity_data_list.xml" value="0.29504400185270957" />
+        <entry key="..\:/ZgirlsTool/app/src/main/res/layout/activity_desk.xml" value="0.2949074074074074" />
+        <entry key="..\:/ZgirlsTool/app/src/main/res/layout/activity_logo.xml" value="0.2949074074074074" />
+        <entry key="..\:/ZgirlsTool/app/src/main/res/layout/activity_main.xml" value="0.2949074074074074" />
+        <entry key="..\:/ZgirlsTool/app/src/main/res/layout/version_item.xml" value="0.33" />
+        <entry key="..\:/ZgirlsTool/app/src/main/res/menu/bgpv_find_backup.xml" value="0.2949074074074074" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/list_db"
+    android:layout_width="200dp"
+    android:layout_height="450dp"
+    android:layout_gravity="left|center"
+    android:background="#E8202020"
+    android:ellipsize="marquee"
+    android:focusable="true"
+    android:gravity="left|center"
+    android:marqueeRepeatLimit="marquee_forever"
+    android:minWidth="200dp"
+    android:minHeight="450dp"
+    android:orientation="horizontal"
+    android:scrollHorizontally="true"
+    android:singleLine="true"
+    android:textScaleX="1.0"
+    android:textSize="20sp"/>

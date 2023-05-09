@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_big"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#CC313131">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/app_icon_round" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:text="TextView"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="fill_parent"
+                android:layout_height="256dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="8dp"
+                android:text="Version 1.0.7 (0029)\n1.Added Update System \n2.Added more data to Kizuna Page \n3.Fixed Event Store Page \n4.New Ingame data list \n5.New Theme : Summer Theme \n6.New App Icon\n7.Fixed TB , EXP Calculator bugs\n8.Add Star Stone Calculator"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

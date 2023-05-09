@@ -1,0 +1,1669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".old_ui.EquipmentLotteryActivity">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/lottery_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/lottery_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_lottery" />
+
+    <Button
+        android:id="@+id/lottery_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_btn"
+        android:onClick="lottery"
+        android:text="Lottery"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/lottery_final"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/diamond" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#313131"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/invisible"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:onClick="invisible" />
+
+        <ScrollView
+            android:id="@+id/sc"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/item01_r1"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare1"
+                            app:srcCompat="@drawable/lottery010" />
+
+                        <ImageView
+                            android:id="@+id/item01_r2"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare2"
+                            app:srcCompat="@drawable/lottery010" />
+
+                        <ImageView
+                            android:id="@+id/item01_r3"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare3"
+                            app:srcCompat="@drawable/lottery010" />
+
+                        <ImageView
+                            android:id="@+id/item01_r4"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare4"
+                            app:srcCompat="@drawable/lottery010" />
+
+                        <ImageView
+                            android:id="@+id/item01_r5"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare5"
+                            app:srcCompat="@drawable/lottery010" />
+
+                        <ImageView
+                            android:id="@+id/item01_r6"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare6"
+                            app:srcCompat="@drawable/lottery010" />
+
+                        <ImageView
+                            android:id="@+id/item01_r7"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare7"
+                            app:srcCompat="@drawable/lottery010" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/item01_tr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item01_tr2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item01_tr3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item01_tr4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item01_tr5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item01_tr6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item01_tr7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/item02_r1"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare1"
+                            app:srcCompat="@drawable/lottery020" />
+
+                        <ImageView
+                            android:id="@+id/item02_r2"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare2"
+                            app:srcCompat="@drawable/lottery020" />
+
+                        <ImageView
+                            android:id="@+id/item02_r3"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare3"
+                            app:srcCompat="@drawable/lottery020" />
+
+                        <ImageView
+                            android:id="@+id/item02_r4"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare4"
+                            app:srcCompat="@drawable/lottery020" />
+
+                        <ImageView
+                            android:id="@+id/item02_r5"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare5"
+                            app:srcCompat="@drawable/lottery020" />
+
+                        <ImageView
+                            android:id="@+id/item02_r6"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare6"
+                            app:srcCompat="@drawable/lottery020" />
+
+                        <ImageView
+                            android:id="@+id/item02_r7"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare7"
+                            app:srcCompat="@drawable/lottery020" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/item02_tr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item02_tr2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item02_tr3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item02_tr4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item02_tr5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item02_tr6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item02_tr7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/item03_r1"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare1"
+                            app:srcCompat="@drawable/lottery030" />
+
+                        <ImageView
+                            android:id="@+id/item03_r2"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare2"
+                            app:srcCompat="@drawable/lottery030" />
+
+                        <ImageView
+                            android:id="@+id/item03_r3"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare3"
+                            app:srcCompat="@drawable/lottery030" />
+
+                        <ImageView
+                            android:id="@+id/item03_r4"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare4"
+                            app:srcCompat="@drawable/lottery030" />
+
+                        <ImageView
+                            android:id="@+id/item03_r5"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare5"
+                            app:srcCompat="@drawable/lottery030" />
+
+                        <ImageView
+                            android:id="@+id/item03_r6"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare6"
+                            app:srcCompat="@drawable/lottery030" />
+
+                        <ImageView
+                            android:id="@+id/item03_r7"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare7"
+                            app:srcCompat="@drawable/lottery030" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/item03_tr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item03_tr2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item03_tr3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item03_tr4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item03_tr5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item03_tr6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item03_tr7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/item04_r1"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare1"
+                            app:srcCompat="@drawable/lottery040" />
+
+                        <ImageView
+                            android:id="@+id/item04_r2"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare2"
+                            app:srcCompat="@drawable/lottery040" />
+
+                        <ImageView
+                            android:id="@+id/item04_r3"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare3"
+                            app:srcCompat="@drawable/lottery040" />
+
+                        <ImageView
+                            android:id="@+id/item04_r4"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare4"
+                            app:srcCompat="@drawable/lottery040" />
+
+                        <ImageView
+                            android:id="@+id/item04_r5"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare5"
+                            app:srcCompat="@drawable/lottery040" />
+
+                        <ImageView
+                            android:id="@+id/item04_r6"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare6"
+                            app:srcCompat="@drawable/lottery040" />
+
+                        <ImageView
+                            android:id="@+id/item04_r7"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare7"
+                            app:srcCompat="@drawable/lottery040" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/item04_tr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item04_tr2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item04_tr3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item04_tr4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item04_tr5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item04_tr6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item04_tr7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/item05_r1"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare1"
+                            app:srcCompat="@drawable/lottery050" />
+
+                        <ImageView
+                            android:id="@+id/item05_r2"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare2"
+                            app:srcCompat="@drawable/lottery050" />
+
+                        <ImageView
+                            android:id="@+id/item05_r3"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare3"
+                            app:srcCompat="@drawable/lottery050" />
+
+                        <ImageView
+                            android:id="@+id/item05_r4"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare4"
+                            app:srcCompat="@drawable/lottery050" />
+
+                        <ImageView
+                            android:id="@+id/item05_r5"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare5"
+                            app:srcCompat="@drawable/lottery050" />
+
+                        <ImageView
+                            android:id="@+id/item05_r6"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare6"
+                            app:srcCompat="@drawable/lottery050" />
+
+                        <ImageView
+                            android:id="@+id/item05_r7"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare7"
+                            app:srcCompat="@drawable/lottery050" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/item05_tr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item05_tr2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item05_tr3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item05_tr4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item05_tr5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item05_tr6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item05_tr7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/item06_r1"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare1"
+                            app:srcCompat="@drawable/lottery060" />
+
+                        <ImageView
+                            android:id="@+id/item06_r2"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare2"
+                            app:srcCompat="@drawable/lottery060" />
+
+                        <ImageView
+                            android:id="@+id/item06_r3"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare3"
+                            app:srcCompat="@drawable/lottery060" />
+
+                        <ImageView
+                            android:id="@+id/item06_r4"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare4"
+                            app:srcCompat="@drawable/lottery060" />
+
+                        <ImageView
+                            android:id="@+id/item06_r5"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare5"
+                            app:srcCompat="@drawable/lottery060" />
+
+                        <ImageView
+                            android:id="@+id/item06_r6"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare6"
+                            app:srcCompat="@drawable/lottery060" />
+
+                        <ImageView
+                            android:id="@+id/item06_r7"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare7"
+                            app:srcCompat="@drawable/lottery060" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/item06_tr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item06_tr2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item06_tr3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item06_tr4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item06_tr5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item06_tr6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item06_tr7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/item07_r1"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare1"
+                            app:srcCompat="@drawable/lottery070" />
+
+                        <ImageView
+                            android:id="@+id/item07_r2"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare2"
+                            app:srcCompat="@drawable/lottery070" />
+
+                        <ImageView
+                            android:id="@+id/item07_r3"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare3"
+                            app:srcCompat="@drawable/lottery070" />
+
+                        <ImageView
+                            android:id="@+id/item07_r4"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare4"
+                            app:srcCompat="@drawable/lottery070" />
+
+                        <ImageView
+                            android:id="@+id/item07_r5"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare5"
+                            app:srcCompat="@drawable/lottery070" />
+
+                        <ImageView
+                            android:id="@+id/item07_r6"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare6"
+                            app:srcCompat="@drawable/lottery070" />
+
+                        <ImageView
+                            android:id="@+id/item07_r7"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare7"
+                            app:srcCompat="@drawable/lottery070" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/item07_tr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item07_tr2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item07_tr3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item07_tr4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item07_tr5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item07_tr6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item07_tr7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/item08_r1"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare1"
+                            app:srcCompat="@drawable/lottery080" />
+
+                        <ImageView
+                            android:id="@+id/item08_r2"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare2"
+                            app:srcCompat="@drawable/lottery080" />
+
+                        <ImageView
+                            android:id="@+id/item08_r3"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare3"
+                            app:srcCompat="@drawable/lottery080" />
+
+                        <ImageView
+                            android:id="@+id/item08_r4"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare4"
+                            app:srcCompat="@drawable/lottery080" />
+
+                        <ImageView
+                            android:id="@+id/item08_r5"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare5"
+                            app:srcCompat="@drawable/lottery080" />
+
+                        <ImageView
+                            android:id="@+id/item08_r6"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare6"
+                            app:srcCompat="@drawable/lottery080" />
+
+                        <ImageView
+                            android:id="@+id/item08_r7"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare7"
+                            app:srcCompat="@drawable/lottery080" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/item08_tr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item08_tr2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item08_tr3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item08_tr4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item08_tr5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item08_tr6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item08_tr7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/item09_r1"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare1"
+                            app:srcCompat="@drawable/lottery090" />
+
+                        <ImageView
+                            android:id="@+id/item09_r2"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare2"
+                            app:srcCompat="@drawable/lottery090" />
+
+                        <ImageView
+                            android:id="@+id/item09_r3"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare3"
+                            app:srcCompat="@drawable/lottery090" />
+
+                        <ImageView
+                            android:id="@+id/item09_r4"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare4"
+                            app:srcCompat="@drawable/lottery090" />
+
+                        <ImageView
+                            android:id="@+id/item09_r5"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare5"
+                            app:srcCompat="@drawable/lottery090" />
+
+                        <ImageView
+                            android:id="@+id/item09_r6"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare6"
+                            app:srcCompat="@drawable/lottery090" />
+
+                        <ImageView
+                            android:id="@+id/item09_r7"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare7"
+                            app:srcCompat="@drawable/lottery090" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/item09_tr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item09_tr2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item09_tr3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item09_tr4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item09_tr5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item09_tr6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item09_tr7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/item10_r1"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare1"
+                            app:srcCompat="@drawable/lottery100" />
+
+                        <ImageView
+                            android:id="@+id/item10_r2"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare2"
+                            app:srcCompat="@drawable/lottery100" />
+
+                        <ImageView
+                            android:id="@+id/item10_r3"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare3"
+                            app:srcCompat="@drawable/lottery100" />
+
+                        <ImageView
+                            android:id="@+id/item10_r4"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare4"
+                            app:srcCompat="@drawable/lottery100" />
+
+                        <ImageView
+                            android:id="@+id/item10_r5"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare5"
+                            app:srcCompat="@drawable/lottery100" />
+
+                        <ImageView
+                            android:id="@+id/item10_r6"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare6"
+                            app:srcCompat="@drawable/lottery100" />
+
+                        <ImageView
+                            android:id="@+id/item10_r7"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare7"
+                            app:srcCompat="@drawable/lottery100" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/item10_tr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item10_tr2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item10_tr3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item10_tr4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item10_tr5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item10_tr6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item10_tr7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/item11_r1"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare1"
+                            app:srcCompat="@drawable/lottery110" />
+
+                        <ImageView
+                            android:id="@+id/item11_r2"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare2"
+                            app:srcCompat="@drawable/lottery110" />
+
+                        <ImageView
+                            android:id="@+id/item11_r3"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare3"
+                            app:srcCompat="@drawable/lottery110" />
+
+                        <ImageView
+                            android:id="@+id/item11_r4"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare4"
+                            app:srcCompat="@drawable/lottery110" />
+
+                        <ImageView
+                            android:id="@+id/item11_r5"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare5"
+                            app:srcCompat="@drawable/lottery110" />
+
+                        <ImageView
+                            android:id="@+id/item11_r6"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare6"
+                            app:srcCompat="@drawable/lottery110" />
+
+                        <ImageView
+                            android:id="@+id/item11_r7"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare7"
+                            app:srcCompat="@drawable/lottery110" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/item11_tr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item11_tr2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item11_tr3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item11_tr4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item11_tr5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item11_tr6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item11_tr7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/item12_r1"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare1"
+                            app:srcCompat="@drawable/lottery120" />
+
+                        <ImageView
+                            android:id="@+id/item12_r2"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare2"
+                            app:srcCompat="@drawable/lottery120" />
+
+                        <ImageView
+                            android:id="@+id/item12_r3"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare3"
+                            app:srcCompat="@drawable/lottery120" />
+
+                        <ImageView
+                            android:id="@+id/item12_r4"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare4"
+                            app:srcCompat="@drawable/lottery120" />
+
+                        <ImageView
+                            android:id="@+id/item12_r5"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare5"
+                            app:srcCompat="@drawable/lottery120" />
+
+                        <ImageView
+                            android:id="@+id/item12_r6"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare6"
+                            app:srcCompat="@drawable/lottery120" />
+
+                        <ImageView
+                            android:id="@+id/item12_r7"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rare7"
+                            app:srcCompat="@drawable/lottery120" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/item12_tr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item12_tr2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item12_tr3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item12_tr4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item12_tr5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item12_tr6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/item12_tr7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite" />
+
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,57 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="database"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_format_list_numbered_24_dark"
+        android:shortcutShortLabel="@string/data_reader"
+        android:shortcutLongLabel="@string/data_reader">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="voc.net.tools.zgirls_tool"
+            android:targetClass="voc.net.tools.zgirls_tool.ui.DataListActivity" />
+        <categories android:name="android.shortcut.conversation"/>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="building"
+        android:enabled="true"
+        android:icon="@drawable/build_infection"
+        android:shortcutShortLabel="@string/tb_building"
+        android:shortcutLongLabel="@string/tb_building">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="voc.net.tools.zgirls_tool"
+            android:targetClass="voc.net.tools.zgirls_tool.ui.BuildingActivity" />
+        <categories android:name="android.shortcut.conversation"/>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="expc"
+        android:enabled="true"
+        android:icon="@drawable/exp_icon7"
+        android:shortcutShortLabel="@string/tb_exp_lvl"
+        android:shortcutLongLabel="@string/tb_exp_lvl">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="voc.net.tools.zgirls_tool"
+            android:targetClass="voc.net.tools.zgirls_tool.old_ui.EXPCActivity" />
+        <categories android:name="android.shortcut.conversation"/>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="izuna"
+        android:enabled="true"
+        android:icon="@drawable/enabler_pict"
+        android:shortcutShortLabel="@string/tb_kizuna"
+        android:shortcutLongLabel="@string/tb_kizuna">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="voc.net.tools.zgirls_tool"
+            android:targetClass="voc.net.tools.zgirls_tool.ui.KizunaActivity" />
+        <categories android:name="android.shortcut.conversation"/>
+    </shortcut>
+</shortcuts>

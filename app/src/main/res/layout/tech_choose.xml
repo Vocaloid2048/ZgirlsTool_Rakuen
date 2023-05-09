@@ -1,0 +1,1507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    android:layout_margin="5dp"
+    android:background="#313131"
+    android:orientation="vertical"
+    android:visibility="visible"
+    app:cardBackgroundColor="#CC646464"
+    app:cardCornerRadius="10dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="#424242"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/choose_tech"
+            android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="false"
+            android:overScrollMode="never"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tech_title1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_2" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_3" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_4" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_5" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_6" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_7" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_8" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_9" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title2"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_dev_a_1" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_dev_a_6" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_dev_a_7" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_dev_a_2" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_dev_a_4" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_dev_a_5" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title3"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_1" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_2" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_3" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_4" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_7" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_5" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_6" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_8" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_9" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title4"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico92"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_1" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico93"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_2" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico94"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_6" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico95"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_3" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico96"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_4" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico97"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_7" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico98"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_8" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_5" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_9" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title5"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_1" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico112"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_2" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico113"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_11" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico114"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_3" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico115"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_4" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico116"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_12" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico117"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_13" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico118"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_9" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico119"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_14" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title6"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico53"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_1" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico57"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_6" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_11" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico65"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_16" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title7"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico54"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_2" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico58"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_7" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico62"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_12" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title8"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico55"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_3" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico59"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_8" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico63"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_13" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title9"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico56"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_4" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico60"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_9" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico64"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_14" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title10"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_9" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_10" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_11" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_2" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_3" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_4" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_5" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_6" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title11"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_dev_a_3" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_dev_a_6" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_dev_a_7" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_dev_a_1" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_dev_a_2" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title12"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico44"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_10" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_1" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico46"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_2" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico47"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_3" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico48"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_5" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title13"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico66"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_11" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico70"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_1" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico74"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_6" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico78"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_16" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title14"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico67"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_2" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_7" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico75"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_12" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title15"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico68"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_3" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico72"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_8" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico76"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_13" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title16"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico69"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_4" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico73"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_9" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico77"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_14" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title17"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico128"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_zombie_9" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico129"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_zombie_2" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico130"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_zombie_1" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico131"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_zombie_11" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico132"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_zombie_10" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico133"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_zombie_8" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title18"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_10" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico102"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_11" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico103"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_12" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico104"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_13" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico105"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_17" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico106"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_14" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico107"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_15" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico108"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_16" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico109"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_fit_a_17" />
+
+                    <ImageView android:id="@+id/tech_ico110"  android:layout_width="wrap_content"  android:layout_height="wrap_content" android:layout_weight="1"  app:srcCompat="@drawable/science_fit_a_18" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title19"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico120"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_10" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_14" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico122"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_7" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico123"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_8" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico124"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_15" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico125"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_9" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico126"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_16" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico127"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_deaf_a_17" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title21"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_7" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_8" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_9" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_10" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_res_a_11" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title22"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_dev_a_4" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_dev_a_5" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_dev_a_3" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title23"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico49"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_6" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_7" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_8" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico52"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_def_a_9" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title24"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico79"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_11" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico83"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_1" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico87"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_6" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico91"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_16" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title25"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_2" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico84"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_7" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico88"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_12" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title26"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico81"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_3" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico85"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_8" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico89"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_13" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title27"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico82"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_4" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico86"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_9" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico90"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_mil_a_14" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tech_title28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tech_title28"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tech_ico134"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_zombie_4" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico135"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_zombie_5" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico136"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_zombie_6" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico137"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_zombie_7" />
+
+                    <ImageView
+                        android:id="@+id/tech_ico138"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/science_zombie_3" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView62"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

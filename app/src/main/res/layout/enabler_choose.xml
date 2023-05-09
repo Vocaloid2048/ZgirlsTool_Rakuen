@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="260dp"
+    android:layout_margin="5dp"
+    android:background="#313131"
+    android:orientation="vertical"
+    app:cardBackgroundColor="#CC646464"
+    app:cardCornerRadius="10dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="#424242"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/tb_enabler"
+            android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="false"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/saki"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_saki" />
+
+                        <ImageView
+                            android:id="@+id/fudo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_fudo" />
+
+                        <ImageView
+                            android:id="@+id/masami"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_masami" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/carol"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_carol" />
+
+                        <ImageView
+                            android:id="@+id/uzuki"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_uzuki" />
+
+                        <ImageView
+                            android:id="@+id/sara"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_sara" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/sariko"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_sariko" />
+
+                        <ImageView
+                            android:id="@+id/chika"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_chika" />
+
+                        <ImageView
+                            android:id="@+id/kirine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_kirine" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/hiyori"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_hiyori" />
+
+                        <ImageView
+                            android:id="@+id/mio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_mio" />
+
+                        <ImageView
+                            android:id="@+id/lzumi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_izumi" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/gin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_gin" />
+
+                        <ImageView
+                            android:id="@+id/nana"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_nana" />
+
+                        <ImageView
+                            android:id="@+id/sumika"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_sumika" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/kayo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_kayo" />
+
+                        <ImageView
+                            android:id="@+id/youko"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_youko" />
+
+                        <ImageView
+                            android:id="@+id/saori"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_saori" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/comet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_comet" />
+
+                        <ImageView
+                            android:id="@+id/donner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_donner" />
+
+                        <ImageView
+                            android:id="@+id/minami"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_minami" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/chen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_chen" />
+
+                        <ImageView
+                            android:id="@+id/eleanor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_eleanor" />
+
+                        <ImageView
+                            android:id="@+id/zero"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_zero" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/ana_o"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_ana_o" />
+
+                        <ImageView
+                            android:id="@+id/odelia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_odelia" />
+
+                        <ImageView
+                            android:id="@+id/zrs2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_zrs2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/liuk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_liuk" />
+
+                        <ImageView
+                            android:id="@+id/akiyama"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_akiyama" />
+
+                        <ImageView
+                            android:id="@+id/esther"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_esther" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/alice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_alice" />
+
+                        <ImageView
+                            android:id="@+id/yesi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_yesi" />
+
+                        <ImageView
+                            android:id="@+id/shiori"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_shiori" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/misaki"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_misaki" />
+
+                        <ImageView
+                            android:id="@+id/risa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_risa" />
+
+                        <ImageView
+                            android:id="@+id/mika"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_mika" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/mira"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_mira" />
+
+                        <ImageView
+                            android:id="@+id/raly"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_raly" />
+
+                        <ImageView
+                            android:id="@+id/celesia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_celesia" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/chiyo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_chiyo" />
+
+                        <ImageView
+                            android:id="@+id/kurul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_kurul" />
+
+                        <ImageView
+                            android:id="@+id/kuroda"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_kuroda" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/catherine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_catherine" />
+
+                        <ImageView
+                            android:id="@+id/shirley"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_shirley" />
+
+                        <ImageView
+                            android:id="@+id/lois"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_lois" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/iris"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_iris" />
+
+                        <ImageView
+                            android:id="@+id/sylvia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_sylvia" />
+
+                        <ImageView
+                            android:id="@+id/narumi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_narumi" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/sp_sara"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_sp_sara" />
+
+                        <ImageView
+                            android:id="@+id/yui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/enabler_yui" />
+
+                        <ImageView
+                            android:id="@+id/demoZ"
+                            android:layout_width="wrap_content"
+                            android:layout_height="72dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/alpha_enabler_bg" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/textView62"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,1704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DataListActivity">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/data_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC313131"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/watching_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    android:gravity="center|center_horizontal"
+                    android:text="@string/watching"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/question_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/app_icon_round"
+                    android:onClick="question"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rss_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="#CC646464"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/rss"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:background="#424242"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/tb_rss"
+                        android:textAlignment="textStart"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/fuel_img"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/fuel" />
+
+                            <TextView
+                                android:id="@+id/data_fuel"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                android:text="0"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/kyanite_img"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                app:srcCompat="@drawable/kyanite" />
+
+                            <TextView
+                                android:id="@+id/data_kyanite"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_weight="1"
+                                android:text="0"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/food_img"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                app:srcCompat="@drawable/food" />
+
+                            <TextView
+                                android:id="@+id/data_food"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                android:text="0"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/kyanite_basic_img"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                app:srcCompat="@drawable/kyanite_basic" />
+
+                            <TextView
+                                android:id="@+id/data_kyanite_basic"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_weight="1"
+                                android:text="0"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/steel_img"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                app:srcCompat="@drawable/steel" />
+
+                            <TextView
+                                android:id="@+id/data_steel"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                android:text="0"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/kyanite_cluster_img"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                app:srcCompat="@drawable/kyanite_cluster" />
+
+                            <TextView
+                                android:id="@+id/data_kyanite_cluster"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_weight="1"
+                                android:text="0"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/alloy_img"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                app:srcCompat="@drawable/alloy" />
+
+                            <TextView
+                                android:id="@+id/data_alloy"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                android:text="0"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/glory_mark_img"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                app:srcCompat="@drawable/glory_mark" />
+
+                            <TextView
+                                android:id="@+id/data_glory_mark"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_weight="1"
+                                android:text="0"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/obsidian_img"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                app:srcCompat="@drawable/rss_obsidian" />
+
+                            <TextView
+                                android:id="@+id/data_obsidian"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_weight="1"
+                                android:text="0"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/catalyst_img"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                app:srcCompat="@drawable/catalyst" />
+
+                            <TextView
+                                android:id="@+id/data_catalyst"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_weight="1"
+                                android:text="0"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/diamond_img"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                app:srcCompat="@drawable/diamond" />
+
+                            <TextView
+                                android:id="@+id/data_diamond"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_weight="1"
+                                android:text="0"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mecha_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="#CC646464"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:background="#424242"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/tb_mechas"
+                        android:textAlignment="textStart"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/mecha_img01"
+                                android:layout_width="wrap_content"
+                                android:layout_height="96dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/mecha_mecha" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/mecha_name01"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/mecha_name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="16dp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/mecha_level01"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Level : 0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/mecha_energy01"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="24dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="Energy : 110"
+                                    android:textColor="@color/colorWhite"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/mecha_power01"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Power : 1000000"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/mecha_img02"
+                                android:layout_width="wrap_content"
+                                android:layout_height="96dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/mecha_land" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/mecha_name02"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/mecha_land_name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="16dp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/mecha_level02"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Level : 0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/mecha_energy02"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="24dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="Energy : 110"
+                                    android:textColor="@color/colorWhite"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/mecha_power02"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Power : 1000000"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/mecha_img03"
+                                android:layout_width="wrap_content"
+                                android:layout_height="96dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/mecha_air" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/mecha_name03"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/mecha_air_name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="16dp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/mecha_level03"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Level : 0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/mecha_energy03"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="24dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="Energy : 110"
+                                    android:textColor="@color/colorWhite"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/mecha_power03"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Power : 1000000"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/mecha_img04"
+                                android:layout_width="wrap_content"
+                                android:layout_height="96dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/mecha_mana" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/mecha_name04"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/mecha_mana_name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="16dp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/mecha_level04"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Level : 0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/mecha_energy04"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="24dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="Energy : 110"
+                                    android:textColor="@color/colorWhite"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/mecha_power04"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Power : 1000000"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/boomer_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="#CC646464"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/boomer"
+                            android:layout_width="100dp"
+                            android:layout_height="36dp"
+                            android:background="#424242"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="@string/tech_boomer"
+                            android:textAlignment="textStart"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/boomer_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:background="#424242"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="@string/boomer_total"
+                            android:textAlignment="viewEnd"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true"
+                        android:overScrollMode="never"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/boom_img1"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/romen_num01"
+                                    app:srcCompat="@drawable/boomer01" />
+
+                                <ImageView
+                                    android:id="@+id/boom_img2"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/romen_num02"
+                                    app:srcCompat="@drawable/boomer02" />
+
+                                <ImageView
+                                    android:id="@+id/boom_img3"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/romen_num03"
+                                    app:srcCompat="@drawable/boomer03" />
+
+                                <ImageView
+                                    android:id="@+id/boom_img4"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/romen_num04"
+                                    app:srcCompat="@drawable/boomer04" />
+
+                                <ImageView
+                                    android:id="@+id/boom_img5"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/romen_num05"
+                                    app:srcCompat="@drawable/boomer05" />
+
+                                <ImageView
+                                    android:id="@+id/boom_img6"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/romen_num01"
+                                    app:srcCompat="@drawable/boomer06" />
+
+                                <ImageView
+                                    android:id="@+id/boom_img7"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/romen_num02"
+                                    app:srcCompat="@drawable/boomer07" />
+
+                                <ImageView
+                                    android:id="@+id/boom_img8"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/romen_num03"
+                                    app:srcCompat="@drawable/boomer08" />
+
+                                <ImageView
+                                    android:id="@+id/boom_img9"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/romen_num04"
+                                    app:srcCompat="@drawable/boomer09" />
+
+                                <ImageView
+                                    android:id="@+id/boom_img10"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/romen_num05"
+                                    app:srcCompat="@drawable/boomer10" />
+
+                                <ImageView
+                                    android:id="@+id/boom_img11"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/romen_num01"
+                                    app:srcCompat="@drawable/boomer11" />
+
+                                <ImageView
+                                    android:id="@+id/boom_img12"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/romen_num02"
+                                    app:srcCompat="@drawable/boomer12" />
+
+                                <ImageView
+                                    android:id="@+id/boom_img13"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/romen_num03"
+                                    app:srcCompat="@drawable/boomer13" />
+
+                                <ImageView
+                                    android:id="@+id/boom_img14"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/romen_num04"
+                                    app:srcCompat="@drawable/boomer14" />
+
+                                <ImageView
+                                    android:id="@+id/boom_img15"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/romen_num05"
+                                    app:srcCompat="@drawable/boomer15" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/boom_tv1"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/boom_tv2"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/boom_tv3"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/boom_tv4"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/boom_tv5"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/boom_tv6"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/boom_tv7"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/boom_tv8"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/boom_tv9"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/boom_tv10"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/boom_tv11"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/boom_tv12"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/boom_tv13"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/boom_tv14"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/boom_tv15"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/troop_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="#CC646464"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/troop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:background="#424242"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="4dp"
+                            android:text="@string/tb_troops"
+                            android:textAlignment="textStart"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/troop_pie"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="0"
+                            android:background="#424242"
+                            android:onClick="troop_pie"
+                            android:padding="4dp"
+                            app:srcCompat="@drawable/ic_baseline_pie_chart_24" />
+
+                        <TextView
+                            android:id="@+id/troop_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:background="#424242"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="@string/troop_total"
+                            android:textAlignment="viewEnd"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true"
+                        android:overScrollMode="never"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/img10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/arm10_img"
+                                    android:layout_width="90dp"
+                                    android:layout_height="117dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/troops_bg1"
+                                    app:srcCompat="@drawable/arm10" />
+
+                                <ImageView
+                                    android:id="@+id/mili10_img"
+                                    android:layout_width="90dp"
+                                    android:layout_height="117dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/troops_bg2"
+                                    app:srcCompat="@drawable/mili10" />
+
+                                <ImageView
+                                    android:id="@+id/mobile10_img"
+                                    android:layout_width="90dp"
+                                    android:layout_height="117dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/troops_bg3"
+                                    app:srcCompat="@drawable/mobile10" />
+
+                                <ImageView
+                                    android:id="@+id/infect10_img"
+                                    android:layout_width="90dp"
+                                    android:layout_height="117dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/troops_bg4"
+                                    app:srcCompat="@drawable/infect10" />
+
+                                <ImageView
+                                    android:id="@+id/project10_img"
+                                    android:layout_width="90dp"
+                                    android:layout_height="117dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/troops_bg5"
+                                    app:srcCompat="@drawable/project10" />
+
+                                <ImageView
+                                    android:id="@+id/arm09_img"
+                                    android:layout_width="90dp"
+                                    android:layout_height="117dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/troops_bg1"
+                                    app:srcCompat="@drawable/arm09" />
+
+                                <ImageView
+                                    android:id="@+id/mili09_img"
+                                    android:layout_width="90dp"
+                                    android:layout_height="117dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/troops_bg2"
+                                    app:srcCompat="@drawable/mili09" />
+
+                                <ImageView
+                                    android:id="@+id/mobile09_img"
+                                    android:layout_width="90dp"
+                                    android:layout_height="117dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/troops_bg3"
+                                    app:srcCompat="@drawable/mobile09" />
+
+                                <ImageView
+                                    android:id="@+id/infect09_img"
+                                    android:layout_width="90dp"
+                                    android:layout_height="117dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/troops_bg4"
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/infect09" />
+
+                                <ImageView
+                                    android:id="@+id/project09_img"
+                                    android:layout_width="90dp"
+                                    android:layout_height="117dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/troops_bg5"
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/project09" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tv10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/arm10_tv"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/mili10_tv"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/mobile10_tv"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/infect10_tv"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/project10_tv"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/arm09_tv"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/mili09_tv"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/mobile09_tv"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/infect09_tv"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/project09_tv"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_weight="0"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/project_process_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="#CC646464"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/process"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:background="#424242"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/progress"
+                        android:textAlignment="textStart"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:id="@+id/armed_process_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/armed_process_img"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/app_icon_round" />
+
+                            <TextView
+                                android:id="@+id/armed_process_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="3,700"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/armed_process_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="0"
+                                android:text="@string/armed"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/armed_process_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="尚餘 03:15:00"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/armed_process_total"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_weight="0"
+                                android:text="完成時間 : 2020-10-28 17:32:05"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/military_process_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/military_process_img"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/app_icon_round" />
+
+                            <TextView
+                                android:id="@+id/military_process_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="3,700"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/military_process_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="0"
+                                android:text="@string/mili"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/military_process_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="尚餘 04:45:00"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/military_process_total"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_weight="0"
+                                android:text="完成時間 : 2020-10-28 17:32:05"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mobile_process_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/mobile_process_img"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/app_icon_round" />
+
+                            <TextView
+                                android:id="@+id/mobile_process_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="3,700"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/mobile_process_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="0"
+                                android:text="@string/mobile"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/mobile_process_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="尚餘 02:20:00"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/mobile_process_total"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_weight="0"
+                                android:text="完成時間 : 2020-10-28 17:32:05"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/infect_process_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/infect_process_img"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/app_icon_round" />
+
+                            <TextView
+                                android:id="@+id/infect_process_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="3,700"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/infect_process_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="0"
+                                android:text="@string/infecion"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/infect_process_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="尚餘 01:40:00"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/infect_process_total"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_weight="0"
+                                android:text="完成時間 : 2020-10-28 17:32:05"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/project_process_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/project_process_img"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/app_icon_round" />
+
+                            <TextView
+                                android:id="@+id/project_process_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="10,000"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/project_process_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="0"
+                                android:text="@string/project"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/project_process_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="完成"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/project_process_total"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_weight="0"
+                                android:text="完成時間 : 2020-10-28 17:32:05"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

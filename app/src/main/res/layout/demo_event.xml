@@ -1,0 +1,1555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.EventActivity">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/event_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC313131"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+    <ScrollView
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/list2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/btn_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/rss_store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="rss"
+                    android:text="@string/event_rss"
+                    android:textColor="@color/colorWhite" />
+
+                <Button
+                    android:id="@+id/enabler_store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_orange_light"
+                    android:onClick="enabler"
+                    android:text="@string/event_enabler"
+                    android:textColor="@color/colorWhite" />
+
+                <Button
+                    android:id="@+id/transform_store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="transform"
+                    android:text="@string/event_transform"
+                    android:textColor="@color/colorWhite" />
+
+                <Button
+                    android:id="@+id/arena_store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:onClick="arena"
+                    android:text="@string/event_arena"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rss_part"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/rss_obs_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/rss_obsidian" />
+
+                        <EditText
+                            android:id="@+id/rss_obs_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_weight="0"
+                            android:maxLength="5"
+                            android:hint="0 - 210"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/rss_food_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/rss_food" />
+
+                        <EditText
+                            android:id="@+id/rss_food_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_weight="0"
+                            android:maxLength="5"
+                            android:hint="0 - 6300"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/rss_fuel_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/rss_fuel" />
+
+                        <EditText
+                            android:id="@+id/rss_fuel_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_weight="0"
+                            android:maxLength="5"
+                            android:hint="0 - 6300"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/rss_steel_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/rss_steel" />
+
+                        <EditText
+                            android:id="@+id/rss_steel_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_weight="0"
+                            android:maxLength="5"
+                            android:hint="0 - 5250"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/rss_alloy_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/rss_alloy" />
+
+                        <EditText
+                            android:id="@+id/rss_alloy_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_weight="0"
+                            android:maxLength="5"
+                            android:hint="0 - 4725"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/rss_kyan_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/kyanite" />
+
+                        <EditText
+                            android:id="@+id/rss_kyan_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_weight="0"
+                            android:maxLength="5"
+                            android:hint="0 - 2100"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/rss_kyan_basic_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/kyanite_basic" />
+
+                        <EditText
+                            android:id="@+id/rss_kyan_basic_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_weight="0"
+                            android:maxLength="5"
+                            android:hint="0 - 12600"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/rss_kyan_clu_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/kyanite_cluster" />
+
+                        <EditText
+                            android:id="@+id/rss_kyan_clu_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_weight="0"
+                            android:maxLength="5"
+                            android:hint="0 - 1680"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/rss_speed_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/rush_up" />
+
+                        <EditText
+                            android:id="@+id/rss_speed_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_weight="0"
+                            android:maxLength="5"
+                            android:hint="0 - 2100"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/enabler_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/enabler_spe_shard_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/enabler_shard_event" />
+
+                        <EditText
+                            android:id="@+id/enabler_spe_shard_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_weight="0"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/enabler_nor_shard_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/normal_shard" />
+
+                        <EditText
+                            android:id="@+id/enabler_nor_shard_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_weight="1"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/enabler_adv_shard_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/super_shard" />
+
+                        <EditText
+                            android:id="@+id/enabler_adv_shard_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_weight="1"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/enabler_mexp_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/enabler_mecha_exp" />
+
+                        <EditText
+                            android:id="@+id/enabler_mexp_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/enabler_exp_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/exp_icon7" />
+
+                        <EditText
+                            android:id="@+id/enabler_exp_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/enabler_pict_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/enabler_pict" />
+
+                        <EditText
+                            android:id="@+id/enabler_pict_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/enabler_aa_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/item_hero_starup" />
+
+                        <EditText
+                            android:id="@+id/enabler_aa_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:visibility="invisible"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <EditText
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base"
+                            android:visibility="invisible" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:visibility="invisible"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <EditText
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base"
+                            android:visibility="invisible" />
+
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transform_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/transform_cc_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/construct_core" />
+
+                        <EditText
+                            android:id="@+id/transform_cc_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/transform_ac_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/advanced_construct_core" />
+
+                        <EditText
+                            android:id="@+id/transform_ac_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/transform_batp_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/battery_proj" />
+
+                        <EditText
+                            android:id="@+id/transform_battery_proj_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/transform_batn_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/battery_normal" />
+
+                        <EditText
+                            android:id="@+id/transform_battery_normal_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/transform_et_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/energy_tesseract" />
+
+                        <EditText
+                            android:id="@+id/transform_et_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:visibility="invisible"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/arena_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/arena_rune_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/arena_rune" />
+
+                        <EditText
+                            android:id="@+id/arena_rune_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/arena_rune_pts_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/arena_rune_pts" />
+
+                        <EditText
+                            android:id="@+id/arena_rune_pts_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/arena_box_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/arena_box" />
+
+                        <EditText
+                            android:id="@+id/arena_box_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/arena_starstone_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/arena_starstone" />
+
+                        <EditText
+                            android:id="@+id/arena_starstone_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/arena_lucky_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/arena_lucky" />
+
+                        <EditText
+                            android:id="@+id/arena_lucky_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <ImageView
+                            android:id="@+id/arena_a_zbag_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/arena_advance_zbag" />
+
+                        <EditText
+                            android:id="@+id/arena_a_zbag_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <EditText
+                            android:id="@+id/arena_arsb_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                        <ImageView
+                            android:id="@+id/arena_arsb_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/icon_chest" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <EditText
+                            android:id="@+id/arena_ab_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                        <ImageView
+                            android:id="@+id/arena_starstone_img3"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/material_manao" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <EditText
+                            android:id="@+id/arena_pmc_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                        <ImageView
+                            android:id="@+id/arena_starstone_img4"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/mecha_exp_box" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <EditText
+                            android:id="@+id/arena_porb_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                        <ImageView
+                            android:id="@+id/arena_starstone_img5"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/purpleore_box" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <EditText
+                            android:id="@+id/arena_crystal_et"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base" />
+
+                        <ImageView
+                            android:id="@+id/arena_starstone_img6"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/material_shuijing" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:visibility="invisible"
+                            app:srcCompat="@drawable/bg_slave" />
+
+                        <EditText
+                            android:id="@+id/arena_starstone_et7"
+                            android:layout_width="match_parent"                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|center"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_base"
+                            android:visibility="invisible" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ticket_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:gravity="center"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/background_base"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/mecha_ok2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_pink"
+                android:onClick="calculate"
+                android:text="@string/public_cal_btn"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ListView
+        android:id="@+id/list_event"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/background_dark_press"
+                        android:textColor="@color/background_dark_press" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="270dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:text="@string/tb_types"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="@string/count"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="@string/tickets"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ListView
+                        android:id="@+id/type_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="600dp"
+                        android:layout_weight="1.5"
+                        android:overScrollMode="never">
+
+                    </ListView>
+
+                    <ListView
+                        android:id="@+id/count_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="600dp"
+                        android:layout_weight="3"
+                        android:overScrollMode="never" />
+
+                    <ListView
+                        android:id="@+id/tickets_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="600dp"
+                        android:layout_weight="3"
+                        android:overScrollMode="never">
+
+                    </ListView>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

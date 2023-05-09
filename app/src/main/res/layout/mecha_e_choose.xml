@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#CC313131"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mecha_e_choose_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/mecha_e_choose_rare"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/rare1"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_kuang_2"
+            android:padding="8dp"
+            app:srcCompat="@drawable/icon_jijiabox1" />
+
+        <ImageView
+            android:id="@+id/rare2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_kuang_3"
+            android:padding="8dp"
+            app:srcCompat="@drawable/icon_jijiabox1" />
+
+        <ImageView
+            android:id="@+id/rare3"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_kuang_4"
+            android:padding="8dp"
+            app:srcCompat="@drawable/icon_jijiabox1" />
+
+        <ImageView
+            android:id="@+id/rare4"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_kuang_5"
+            android:padding="8dp"
+            app:srcCompat="@drawable/icon_jijiabox1" />
+
+        <ImageView
+            android:id="@+id/rare5"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_kuang_6"
+            android:padding="8dp"
+            app:srcCompat="@drawable/icon_jijiabox1" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

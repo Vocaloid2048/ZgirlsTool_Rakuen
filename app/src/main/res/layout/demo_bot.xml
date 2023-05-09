@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/boomer_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:visibility="visible"
+        app:cardBackgroundColor="#CC646464"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/boomer"
+                    android:layout_width="100dp"
+                    android:layout_height="36dp"
+                    android:background="#424242"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/tech_boomer"
+                    android:textAlignment="textStart"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/boomer_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/boomer_total"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/boom_img1"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/romen_num01"
+                            app:srcCompat="@drawable/boomer01" />
+
+                        <ImageView
+                            android:id="@+id/boom_img2"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/romen_num02"
+                            app:srcCompat="@drawable/boomer02" />
+
+                        <ImageView
+                            android:id="@+id/boom_img3"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/romen_num03"
+                            app:srcCompat="@drawable/boomer03" />
+
+                        <ImageView
+                            android:id="@+id/boom_img4"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/romen_num04"
+                            app:srcCompat="@drawable/boomer04" />
+
+                        <ImageView
+                            android:id="@+id/boom_img5"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/romen_num05"
+                            app:srcCompat="@drawable/boomer05" />
+
+                        <ImageView
+                            android:id="@+id/boom_img6"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/romen_num01"
+                            app:srcCompat="@drawable/boomer06" />
+
+                        <ImageView
+                            android:id="@+id/boom_img7"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/romen_num02"
+                            app:srcCompat="@drawable/boomer07" />
+
+                        <ImageView
+                            android:id="@+id/boom_img8"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/romen_num03"
+                            app:srcCompat="@drawable/boomer08" />
+
+                        <ImageView
+                            android:id="@+id/boom_img9"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/romen_num04"
+                            app:srcCompat="@drawable/boomer09" />
+
+                        <ImageView
+                            android:id="@+id/boom_img10"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/romen_num05"
+                            app:srcCompat="@drawable/boomer10" />
+
+                        <ImageView
+                            android:id="@+id/boom_img11"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/romen_num01"
+                            app:srcCompat="@drawable/boomer11" />
+
+                        <ImageView
+                            android:id="@+id/boom_img12"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/romen_num02"
+                            app:srcCompat="@drawable/boomer12" />
+
+                        <ImageView
+                            android:id="@+id/boom_img13"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/romen_num03"
+                            app:srcCompat="@drawable/boomer13" />
+
+                        <ImageView
+                            android:id="@+id/boom_img14"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/romen_num04"
+                            app:srcCompat="@drawable/boomer14" />
+
+                        <ImageView
+                            android:id="@+id/boom_img15"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/romen_num05"
+                            app:srcCompat="@drawable/boomer15" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/boom_tv1"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/boom_tv2"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/boom_tv3"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/boom_tv4"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/boom_tv5"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/boom_tv6"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/boom_tv7"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/boom_tv8"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/boom_tv9"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/boom_tv10"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/boom_tv11"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/boom_tv12"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/boom_tv13"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/boom_tv14"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/boom_tv15"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"></LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</ListView>

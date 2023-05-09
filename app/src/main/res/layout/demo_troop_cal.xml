@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context=".old_ui.TroopsActivity">
+
+    <ImageView
+        android:id="@+id/troop_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#CC313131"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/proj_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="project"
+                    android:text="@string/project" />
+
+                <Button
+                    android:id="@+id/arm_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_orange_light"
+                    android:onClick="armed"
+                    android:text="@string/armed" />
+
+                <Button
+                    android:id="@+id/mili_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="mility"
+                    android:text="@string/mili" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/mobile_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:onClick="mobile"
+                    android:text="@string/mobile" />
+
+                <Button
+                    android:id="@+id/infect_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:onClick="infection"
+                    android:text="@string/infecion" />
+
+                <Button
+                    android:id="@+id/buff_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_purple"
+                    android:onClick="buff"
+                    android:text="@string/buff" />
+
+            </TableRow>
+
+            <LinearLayout
+                android:id="@+id/buff_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/buff02_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0"
+                        android:text="@string/buff_2"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/buff02_et2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:inputType="number"
+                        android:text=" + "
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/buff02_et"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/buff02_et3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:inputType="number"
+                        android:text=" %"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/buff03_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0"
+                        android:text="@string/buff_3"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/buff02_et4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:inputType="number"
+                        android:text=" - "
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/buff03_et"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/buff02_et5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:inputType="number"
+                        android:text=" %"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/buff01c_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:text="@string/buff_01_count"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/buff01c_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="0"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:text="10"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/buff01t_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:text="@string/buff_01_type"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/troop_choose"
+                            android:layout_width="72dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="0"
+                            android:onClick="troop_choose"
+                            app:srcCompat="@drawable/blank_box" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/buff01_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_weight="0"
+                            android:gravity="center"
+                            android:text="@string/buff_01_time"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/buff01_et1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_weight="1"
+                                android:hint="Days"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:textColor="@color/colorWhite" />
+
+                            <EditText
+                                android:id="@+id/buff01_et2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_weight="1"
+                                android:hint="Hours"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:textColor="@color/colorWhite" />
+
+                            <EditText
+                                android:id="@+id/buff01_et3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_weight="1"
+                                android:hint="Minutes"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:textColor="@color/colorWhite" />
+
+                            <EditText
+                                android:id="@+id/buff01_et4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_weight="1"
+                                android:hint="Seconds"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:textColor="@color/colorWhite" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CC313131"
+        android:overScrollMode="never"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="@color/background_dark_press" />
+
+                        <TextView
+                            android:id="@+id/troop_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/troop_total"
+                            android:textColor="@color/background_base"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0">
+
+                                <ImageView
+                                    android:id="@+id/fuel_img"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/fuel" />
+
+                                <TextView
+                                    android:id="@+id/troop_fuel"
+                                    android:layout_width="175dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="0"
+                                    android:text="0"
+                                    android:textColor="@color/background_base"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:id="@+id/kyanite_cluster_img"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/kyanite_cluster" />
+
+                                <TextView
+                                    android:id="@+id/troop_kyanite_cluster"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="0"
+                                    android:text="0"
+                                    android:textColor="@color/background_base"
+                                    android:textSize="14sp" />
+                            </TableRow>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/food_img"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/food" />
+
+                                <TextView
+                                    android:id="@+id/troop_food"
+                                    android:layout_width="175dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="0"
+                                    android:text="0"
+                                    android:textColor="@color/background_base"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:id="@+id/power_img"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/power" />
+
+                                <TextView
+                                    android:id="@+id/troop_power"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="0"
+                                    android:text="0.0"
+                                    android:textColor="@color/background_base"
+                                    android:textSize="14sp" />
+                            </TableRow>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/steel_img"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginLeft="8dp"
+                                    app:srcCompat="@drawable/steel" />
+
+                                <TextView
+                                    android:id="@+id/troop_steel"
+                                    android:layout_width="175dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="0"
+                                    android:textColor="@color/background_base"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:id="@+id/load_img"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginLeft="8dp"
+                                    app:srcCompat="@drawable/load" />
+
+                                <TextView
+                                    android:id="@+id/troop_load"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="1"
+                                    android:text="0"
+                                    android:textColor="@color/background_base"
+                                    android:textSize="14sp" />
+                            </TableRow>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/alloy_img"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/alloy" />
+
+                                <TextView
+                                    android:id="@+id/troop_alloy"
+                                    android:layout_width="175dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="0"
+                                    android:text="0"
+                                    android:textColor="@color/background_base"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:id="@+id/kyanite_basic_img"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/kyanite_basic" />
+
+                                <TextView
+                                    android:id="@+id/troop_kyanite_basic"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="0"
+                                    android:text="0"
+                                    android:textColor="@color/background_base"
+                                    android:textSize="14sp" />
+                            </TableRow>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/kyanite_img"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/kyanite" />
+
+                                <TextView
+                                    android:id="@+id/troop_kyanite"
+                                    android:layout_width="175dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="0"
+                                    android:text="0"
+                                    android:textColor="@color/background_base"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:id="@+id/cost_img"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/food_loss" />
+
+                                <TextView
+                                    android:id="@+id/troop_cost"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="0"
+                                    android:text="0.0 /h"
+                                    android:textColor="@color/background_base"
+                                    android:textSize="14sp" />
+                            </TableRow>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/time_img"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                app:srcCompat="@drawable/rush_up" />
+
+                            <TextView
+                                android:id="@+id/troop_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_weight="1"
+                                android:text="00d , 00:00:00"
+                                android:textColor="@color/background_base"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/troop_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_pink"
+                android:onClick="troop_calcalate"
+                android:text="@string/public_cal_btn" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

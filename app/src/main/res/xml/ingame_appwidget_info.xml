@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialLayout="@layout/suspension_btn"
+    android:minWidth="48dp"
+    android:minHeight="48dp"
+    android:minResizeWidth="48dp"
+    android:previewImage="@drawable/ic_baseline_format_list_numbered_24_dark"
+    android:resizeMode="none"
+    android:updatePeriodMillis="3600000"
+    android:widgetCategory="home_screen">
+
+</appwidget-provider>

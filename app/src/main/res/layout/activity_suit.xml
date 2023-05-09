@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SuitActivity">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/suit_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC313131"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+    <ImageView
+        android:id="@+id/enabler_suit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/kurul_full" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/suit_part1"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/blank_box"
+            android:onClick="suit1"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <ImageView
+            android:id="@+id/suit_part2"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/blank_box"
+            android:onClick="suit2"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45" />
+
+        <ImageView
+            android:id="@+id/suit_part3"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/blank_box"
+            android:onClick="suit3"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.7" />
+
+        <ImageView
+            android:id="@+id/suit_part4"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/blank_box"
+            android:onClick="suit4"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <ImageView
+            android:id="@+id/suit_part5"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/blank_box"
+            android:onClick="suit5"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45" />
+
+        <ImageView
+            android:id="@+id/suit_part6"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/blank_box"
+            android:onClick="suit6"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.7" />
+
+        <ImageView
+            android:id="@+id/suit_part7"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/blank_box_show"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.95" />
+
+        <ImageView
+            android:id="@+id/suit_part8"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/blank_box_show"
+            android:onClick="suit_part8"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.95"
+            app:srcCompat="@drawable/app_icon_round" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView9"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="#313131"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/suit_bg"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_each"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:onClick="each_part"
+                    android:text="Each part"
+                    android:textColor="@color/colorWhite" />
+
+                <Button
+                    android:id="@+id/btn_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:onClick="summary"
+                    android:text="Summary"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#CCFFFFFF" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/each_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/icon_suit01"
+                                        android:layout_width="56dp"
+                                        android:layout_height="56dp"
+                                        android:layout_weight="0"
+                                        android:background="@drawable/rare6"
+                                        android:padding="8dp" />
+
+                                    <TextView
+                                        android:id="@+id/name_suit01"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingLeft="8dp"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="18sp" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/buffA_suit01"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffB_suit01"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffC_suit01"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffD_suit01"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/icon_suit02"
+                                        android:layout_width="56dp"
+                                        android:layout_height="56dp"
+                                        android:layout_weight="0"
+                                        android:background="@drawable/rare6"
+                                        android:padding="8dp" />
+
+                                    <TextView
+                                        android:id="@+id/name_suit02"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingLeft="8dp"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="18sp" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/buffA_suit02"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffB_suit02"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffC_suit02"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffD_suit02"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/icon_suit03"
+                                        android:layout_width="56dp"
+                                        android:layout_height="56dp"
+                                        android:layout_weight="0"
+                                        android:background="@drawable/rare6"
+                                        android:padding="8dp" />
+
+                                    <TextView
+                                        android:id="@+id/name_suit03"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingLeft="8dp"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="18sp" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/buffA_suit03"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffB_suit03"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffC_suit03"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffD_suit03"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/icon_suit04"
+                                        android:layout_width="56dp"
+                                        android:layout_height="56dp"
+                                        android:layout_weight="0"
+                                        android:background="@drawable/rare6"
+                                        android:padding="8dp" />
+
+                                    <TextView
+                                        android:id="@+id/name_suit04"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingLeft="8dp"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="18sp" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/buffA_suit04"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffB_suit04"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffC_suit04"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffD_suit04"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/icon_suit05"
+                                        android:layout_width="56dp"
+                                        android:layout_height="56dp"
+                                        android:layout_weight="0"
+                                        android:background="@drawable/rare6"
+                                        android:padding="8dp" />
+
+                                    <TextView
+                                        android:id="@+id/name_suit05"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingLeft="8dp"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="18sp" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/buffA_suit05"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffB_suit05"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffC_suit05"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffD_suit05"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/icon_suit06"
+                                        android:layout_width="56dp"
+                                        android:layout_height="56dp"
+                                        android:layout_weight="0"
+                                        android:background="@drawable/rare6"
+                                        android:padding="8dp" />
+
+                                    <TextView
+                                        android:id="@+id/name_suit06"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingLeft="8dp"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="18sp" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/buffA_suit06"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffB_suit06"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffC_suit06"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/buffD_suit06"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="0"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/suit_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="267dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

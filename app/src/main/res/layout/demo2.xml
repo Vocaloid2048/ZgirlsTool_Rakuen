@@ -1,0 +1,3120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/project_process_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="#CC646464"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/process"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:background="#424242"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/progress"
+                        android:textAlignment="textStart"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:id="@+id/armed_process_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/armed_process_img"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/app_icon_round" />
+
+                            <TextView
+                                android:id="@+id/armed_process_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="3,700"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/armed_process_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="0"
+                                android:text="@string/armed"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/armed_process_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="尚餘 03:15:00"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/armed_process_total"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_weight="0"
+                                android:text="完成時間 : 2020-10-28 17:32:05"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/military_process_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/military_process_img"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/app_icon_round" />
+
+                            <TextView
+                                android:id="@+id/military_process_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="3,700"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/military_process_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="0"
+                                android:text="@string/mili"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/military_process_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="尚餘 04:45:00"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/military_process_total"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_weight="0"
+                                android:text="完成時間 : 2020-10-28 17:32:05"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mobile_process_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/mobile_process_img"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/app_icon_round" />
+
+                            <TextView
+                                android:id="@+id/mobile_process_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="3,700"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/mobile_process_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="0"
+                                android:text="@string/mobile"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/mobile_process_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="尚餘 02:20:00"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/mobile_process_total"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_weight="0"
+                                android:text="完成時間 : 2020-10-28 17:32:05"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/infect_process_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/infect_process_img"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/app_icon_round" />
+
+                            <TextView
+                                android:id="@+id/infect_process_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="3,700"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/infect_process_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="0"
+                                android:text="@string/infecion"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/infect_process_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="尚餘 01:40:00"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/infect_process_total"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_weight="0"
+                                android:text="完成時間 : 2020-10-28 17:32:05"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/project_process_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/project_process_img"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_weight="0"
+                                app:srcCompat="@drawable/app_icon_round" />
+
+                            <TextView
+                                android:id="@+id/project_process_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="10,000"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/project_process_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="0"
+                                android:text="@string/project"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/project_process_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="完成"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/project_process_total"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_weight="0"
+                                android:text="完成時間 : 2020-10-28 17:32:05"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/enabler_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="#CC646464"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/enabler"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:background="#424242"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/tb_enabler"
+                        android:textAlignment="textStart"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:overScrollMode="never"
+                        android:scrollbars="none">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_01"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_saki" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_02"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_fudo" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_03"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_masami" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_04"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_carol" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_05"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_sara" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_16"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_kayo" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_17"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_youko" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_18"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_saori" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_19"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_comet" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_20"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_donner" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_31"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_alice" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_32"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_yesi" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_33"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_shiori" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_34"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_misaki" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_35"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_risa" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_46"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/enabler_iris" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_47"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_sylvia" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_48"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_narumi" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_49"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/enabler_fudo" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_50"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/enabler_fudo" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/enabler_name01"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name02"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name03"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name04"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name05"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name16"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name17"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name18"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name19"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name20"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name31"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name32"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name33"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name34"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name35"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name46"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name47"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name48"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name49"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name50"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="gone" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/enabler_level01"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Level : 17"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level02"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Level : 17"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level03"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Level : 17"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level04"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Level : 17"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level05"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Level : 17"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level16"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 27"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level17"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 28"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level18"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 29"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level19"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 30"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level20"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 31"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level31"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 42"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level32"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 43"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level33"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 44"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level34"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 45"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level35"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 46"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level46"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 57"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level47"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 58"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level48"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 59"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level49"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 60"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level50"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 61"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/enabler_power01"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Power : 25000"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power02"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Power : 25000"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power03"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Power : 25000"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power04"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Power : 25000"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power05"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Power : 25000"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power16"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25010"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power17"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25011"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power18"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25012"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power19"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25013"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power20"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25014"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power31"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25025"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power32"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25026"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power33"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25027"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power34"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25028"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power35"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25029"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power46"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25040"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power47"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25041"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power48"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25042"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power49"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25043"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power50"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25044"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_06"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_uzuki" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_07"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_sariko" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_08"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_chika" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_09"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_kirine" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_10"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_hiyori" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_21"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_minami" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_22"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_chen" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_23"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_eleanor" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_24"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_zero" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_25"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_ana_o" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_36"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/enabler_mika" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_37"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/enabler_mira" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_38"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/enabler_raly" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_39"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/enabler_celesia" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_40"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/enabler_chiyo" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_51"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="invisible"
+                                    app:srcCompat="@drawable/enabler_fudo" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_52"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="invisible"
+                                    app:srcCompat="@drawable/enabler_fudo" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_53"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="invisible"
+                                    app:srcCompat="@drawable/enabler_fudo" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_54"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/enabler_fudo" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_55"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/enabler_fudo" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/enabler_name06"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name07"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name08"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name09"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name10"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name21"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name22"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name23"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name24"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name25"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name36"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name37"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name38"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name39"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name40"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name51"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name52"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name53"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name54"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name55"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="gone" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/enabler_level06"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Level : 17"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level07"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Level : 18"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level08"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Level : 19"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level09"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Level : 20"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Level : 21"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level21"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 32"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level22"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 33"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level23"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 34"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level24"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 35"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level25"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 36"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level36"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 47"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level37"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 48"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level38"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 49"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level39"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 50"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level40"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 51"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level51"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 61"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level52"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 61"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level53"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 61"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level54"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 61"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level55"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 61"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/enabler_power06"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Power : 25000"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power07"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Power : 25001"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power08"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Power : 25002"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power09"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Power : 25003"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Power : 25004"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power21"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25015"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power22"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25016"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power23"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25017"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power24"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25018"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power25"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25019"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power36"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25030"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power37"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25031"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power38"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25032"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power39"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25033"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power40"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25034"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power51"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25044"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power52"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25044"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power53"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25044"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power54"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25044"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power55"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25044"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_11"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_mio" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_12"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_izumi" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_13"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_gin" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_14"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_nana" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_15"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_sumika" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_26"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_odelia" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_27"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_zrs2" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_28"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_liuk" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_29"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_akiyama" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_30"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/enabler_esther" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_41"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/enabler_kurul" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_42"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/enabler_kuroda" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_43"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/enabler_catherine" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_44"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/enabler_shirley" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_45"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/enabler_lois" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_56"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="invisible"
+                                    app:srcCompat="@drawable/enabler_fudo" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_57"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="invisible"
+                                    app:srcCompat="@drawable/enabler_fudo" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_58"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="invisible"
+                                    app:srcCompat="@drawable/enabler_fudo" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_59"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/enabler_fudo" />
+
+                                <ImageView
+                                    android:id="@+id/enabler_img_60"
+                                    android:layout_width="88dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/enabler_fudo" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/enabler_name11"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Catherine Edward"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name12"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name13"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name14"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name15"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name26"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name27"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name28"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name29"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name30"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name41"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name42"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name43"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name44"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name45"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name56"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name57"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name58"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name59"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/enabler_name60"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Name"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="18sp"
+                                    android:visibility="gone" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/enabler_level11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Level : 22"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Level : 23"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level13"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Level : 24"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level14"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Level : 25"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level15"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Level : 26"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level26"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 37"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level27"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 38"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level28"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 39"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level29"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 40"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level30"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 41"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level41"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 52"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level42"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 53"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level43"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 54"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level44"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 55"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level45"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 56"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level56"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 61"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level57"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 61"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level58"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 61"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level59"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 61"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/enabler_level60"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Level : 61"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/enabler_power11"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Power : 25005"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power12"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Power : 25006"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power13"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Power : 25007"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power14"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Power : 25008"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power15"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="Power : 25009"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power26"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25020"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power27"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25021"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power28"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25022"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power29"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25023"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power30"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25024"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power41"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25035"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power42"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0"
+                                    android:text="Power : 25036"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power43"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25037"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power44"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25038"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power45"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25039"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power56"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25044"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power57"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25044"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power58"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25044"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power59"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25044"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/enabler_power60"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Power : 25044"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            </TableRow>
+
+                        </TableLayout>
+                    </HorizontalScrollView>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

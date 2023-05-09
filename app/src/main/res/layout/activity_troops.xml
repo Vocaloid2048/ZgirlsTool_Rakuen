@@ -1,0 +1,2836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context=".old_ui.TroopsActivity">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/troop_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC313131"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/proj_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="project"
+                    android:text="@string/project" />
+
+                <Button
+                    android:id="@+id/arm_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_orange_light"
+                    android:onClick="armed"
+                    android:text="@string/armed" />
+
+                <Button
+                    android:id="@+id/mili_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="mility"
+                    android:text="@string/mili" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/mobile_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:onClick="mobile"
+                    android:text="@string/mobile" />
+
+                <Button
+                    android:id="@+id/infect_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:onClick="infection"
+                    android:text="@string/infecion" />
+
+                <Button
+                    android:id="@+id/buff_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_purple"
+                    android:onClick="buff"
+                    android:text="@string/buff" />
+
+            </TableRow>
+
+            <LinearLayout
+                android:id="@+id/buff_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/buff02_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0"
+                        android:text="@string/buff_2"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/buff02_et2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:inputType="number"
+                        android:text=" + "
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/buff02_et"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/buff02_et3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:inputType="number"
+                        android:text=" %"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/buff03_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0"
+                        android:text="@string/buff_3"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/buff02_et4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:inputType="number"
+                        android:text=" - "
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/buff03_et"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/buff02_et5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:inputType="number"
+                        android:text=" %"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/buff01c_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:text="@string/buff_01_count"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/buff01c_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="0"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:text="10"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/buff01t_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:text="@string/buff_01_type"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/troop_choose"
+                            android:layout_width="72dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="0"
+                            android:onClick="troop_choose"
+                            app:srcCompat="@drawable/blank_box" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/buff01_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_weight="0"
+                            android:gravity="center"
+                            android:text="@string/buff_01_time"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/buff01_et1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_weight="1"
+                                android:hint="Days"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:textColor="@color/colorWhite" />
+
+                            <EditText
+                                android:id="@+id/buff01_et2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_weight="1"
+                                android:hint="Hours"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:textColor="@color/colorWhite" />
+
+                            <EditText
+                                android:id="@+id/buff01_et3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_weight="1"
+                                android:hint="Minutes"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:textColor="@color/colorWhite" />
+
+                            <EditText
+                                android:id="@+id/buff01_et4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_weight="1"
+                                android:hint="Seconds"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:textColor="@color/colorWhite" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/arm_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/arm_1"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_arm01" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/arm_1_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/arm_1"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/arm_1_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/arm_2"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_arm02" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/arm_2_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/arm_2"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/arm_2_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/arm_3"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_arm03" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/arm_3_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/arm_3"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/arm_3_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/arm_4"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_arm04" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/arm_4_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/arm_4"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/arm_4_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/arm_5"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_arm05" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/arm_5_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/arm_5"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/arm_5_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/arm_6"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_arm06" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/arm_6_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/arm_6"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/arm_6_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/arm_7"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_arm07" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/arm_7_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/arm_7"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/arm_7_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/arm_8"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_arm08" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/arm_8_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/arm_8"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/arm_8_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/arm_9"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_arm09" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/arm_9_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/arm_9"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/arm_9_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/arm_10"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_arm10" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/arm_10_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/arm_10"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/arm_10_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mili_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mili_1"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mili01" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mili_1_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mili_1"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mili_1_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mili_2"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mili02" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mili_2_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mili_2"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mili_2_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mili_3"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mili03" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mili_3_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mili_3"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mili_3_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mili_4"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mili04" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mili_4_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mili_4"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mili_4_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mili_5"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mili05" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mili_5_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mili_5"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mili_5_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mili_6"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mili06" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mili_6_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mili_6"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mili_6_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mili_7"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mili07" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mili_7_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mili_7"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mili_7_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mili_8"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mili08" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mili_8_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mili_8"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mili_8_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mili_9"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mili09" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mili_9_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mili_9"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mili_9_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mili_10"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mili10" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mili_10_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mili_10"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mili_10_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/infect_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/infect_1"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_infect01" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/infect_1_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/infect_1"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/infect_1_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/infect_2"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_infect02" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/infect_2_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/infect_2"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/infect_2_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/infect_3"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_infect03" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/infect_3_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/infect_3"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/infect_3_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/infect_4"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_infect04" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/infect_4_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/infect_4"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/infect_4_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/infect_5"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_infect05" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/infect_5_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/infect_5"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/infect_5_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/infect_6"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_infect06" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/infect_6_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/infect_6"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/infect_6_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/infect_7"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_infect07" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/infect_7_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/infect_7"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/infect_7_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/infect_8"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_infect08" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/infect_8_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/infect_8"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/infect_8_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/infect_9"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_infect09" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/infect_9_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/infect_9"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/infect_9_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/infect_10"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_infect10" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/infect_10_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/infect_10"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/infect_10_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mobile_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mobile_1"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mobile01" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mobile_1_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mobile_1"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mobile_1_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mobile_2"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mobile02" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mobile_2_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mobile_2"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mobile_2_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mobile_3"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mobile03" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mobile_3_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mobile_3"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mobile_3_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mobile_4"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mobile04" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mobile_4_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mobile_4"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mobile_4_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mobile_5"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mobile05" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mobile_5_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mobile_5"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mobile_5_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mobile_6"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mobile06" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mobile_6_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mobile_6"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mobile_6_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mobile_7"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mobile07" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mobile_7_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mobile_7"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mobile_7_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mobile_8"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mobile08" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mobile_8_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mobile_8"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mobile_8_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mobile_9"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mobile09" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mobile_9_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mobile_9"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mobile_9_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mobile_10"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_mobile10" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mobile_10_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/mobile_10"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/mobile_10_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/proj_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/proj_1"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_project01" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/proj_1_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/proj_1"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/proj_1_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/proj_2"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_project02" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/proj_2_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/proj_2"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/proj_2_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/proj_3"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_project03" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/proj_3_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/proj_3"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/proj_3_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/proj_4"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_project04" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/proj_4_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/proj_4"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/proj_4_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/proj_5"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_project05" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/proj_5_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/proj_5"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/proj_5_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/proj_6"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_project06" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/proj_6_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/proj_6"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/proj_6_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/proj_7"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_project07" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/proj_7_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/proj_7"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/proj_7_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/proj_8"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_project08" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/proj_8_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/proj_8"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/proj_8_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/proj_9"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_project09" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/proj_9_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/proj_9"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/proj_9_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/proj_10"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/hs_project10" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/proj_10_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/proj_10"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/proj_10_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="@color/background_dark_press" />
+
+                        <TextView
+                            android:id="@+id/troop_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/troop_total"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/fuel_img"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="0"
+                                        app:srcCompat="@drawable/fuel" />
+
+                                    <TextView
+                                        android:id="@+id/troop_fuel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="0"
+                                        android:text="0"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/kyanite_basic_img"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="0"
+                                        app:srcCompat="@drawable/kyanite_basic" />
+
+                                    <TextView
+                                        android:id="@+id/troop_kyanite_basic"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="0"
+                                        android:text="0"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                            </TableRow>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="11"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/food_img"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="0"
+                                        app:srcCompat="@drawable/food" />
+
+                                    <TextView
+                                        android:id="@+id/troop_food"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="0"
+                                        android:text="0"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="11"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/kyanite_cluster_img"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="0"
+                                        app:srcCompat="@drawable/kyanite_cluster" />
+
+                                    <TextView
+                                        android:id="@+id/troop_kyanite_cluster"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="0"
+                                        android:text="0"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                            </TableRow>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/steel_img"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:layout_marginLeft="8dp"
+                                        app:srcCompat="@drawable/steel" />
+
+                                    <TextView
+                                        android:id="@+id/troop_steel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="8dp"
+                                        android:text="0"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/load_img"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:layout_marginLeft="8dp"
+                                        app:srcCompat="@drawable/load" />
+
+                                    <TextView
+                                        android:id="@+id/troop_load"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="1"
+                                        android:text="0"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                            </TableRow>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/alloy_img"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="0"
+                                        app:srcCompat="@drawable/alloy" />
+
+                                    <TextView
+                                        android:id="@+id/troop_alloy"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="0"
+                                        android:text="0"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/power_img"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="0"
+                                        app:srcCompat="@drawable/power" />
+
+                                    <TextView
+                                        android:id="@+id/troop_power"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="0"
+                                        android:text="0.0"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                            </TableRow>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/kyanite_img"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="0"
+                                        app:srcCompat="@drawable/kyanite" />
+
+                                    <TextView
+                                        android:id="@+id/troop_kyanite"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="0"
+                                        android:text="0"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/cost_img"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="0"
+                                        app:srcCompat="@drawable/food_loss" />
+
+                                    <TextView
+                                        android:id="@+id/troop_cost"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_weight="0"
+                                        android:text="0.0 /h"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                            </TableRow>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/time_img"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="8dp"
+                                app:srcCompat="@drawable/rush_up" />
+
+                            <TextView
+                                android:id="@+id/troop_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="8dp"
+                                android:layout_weight="1"
+                                android:text="00:00:00"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/troop_ok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/background_pink"
+                    android:onClick="troop_calcalate"
+                    android:text="@string/public_cal_btn" />
+
+                <Button
+                    android:id="@+id/clean_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="#2196F3"
+                    android:onClick="clean"
+                    android:text="@string/clear" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
